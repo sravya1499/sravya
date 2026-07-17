@@ -6,6 +6,7 @@ import CompleteProfile from "./pages/CompleteProfile";
 import AppLayout from "./components/AppLayout";
 import Dashboard from "./pages/Dashboard";
 import Explore from "./pages/Explore";
+import ExploreTeammates from "./pages/ExploreTeammates";
 import Projects from "./pages/Projects";
 import ProjectDetail from "./pages/ProjectDetail";
 import TeamWorkspace from "./pages/TeamWorkspace";
@@ -71,6 +72,7 @@ export default function App() {
       >
         <Route index element={<Dashboard />} />
         <Route path="explore" element={<Explore />} />
+        <Route path="teammates" element={<ExploreTeammates />} />
         <Route path="projects" element={<Projects />} />
         <Route path="projects/:id" element={<ProjectDetail />} />
         <Route path="team/:id" element={<TeamWorkspace />} />

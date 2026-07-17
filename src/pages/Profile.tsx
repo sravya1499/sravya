@@ -3,7 +3,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { CreditCard as Edit3, MapPin, GraduationCap, Github, Mail, Save, X, Briefcase, Award, Calendar, ArrowLeft, MessageSquare, Flag } from "lucide-react";
 import { useAuth } from "../lib/auth";
 import {
-  fetchProfile, fetchProfileByUsername, updateProfile, fetchProjects,
+  fetchProfile, fetchProfileByUsername, updateProfile, fetchProjects, createReport,
 } from "../lib/api";
 import { Profile as ProfileT, Project, ProjectExperience, Availability } from "../lib/types";
 import { AVAILABILITY_LABELS } from "../lib/types";
@@ -179,7 +179,7 @@ export default function ProfilePage() {
       <ReportModal open={reportOpen} onClose={() => setReportOpen(false)} onSubmit={async (reason) => {
         if (!me) return;
         try {
-          await import("../lib/api").then(m => m.createReport({ target_type: "profile", target_id: profile.id, reason }));
+          await createReport({ target_type: "profile", target_id: profile.id, reason });
           toast({ type: "success", message: "Report submitted" }); setReportOpen(false);
         } catch (e: any) { toast({ type: "error", message: e.message }); }
       }} />

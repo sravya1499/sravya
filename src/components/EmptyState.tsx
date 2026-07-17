@@ -1,8 +1,7 @@
 import { ReactNode } from "react";
-import { Video as LucideIcon } from "lucide-react";
 
 interface Props {
-  icon?: LucideIcon;
+  icon?: React.ComponentType<{ className?: string }>;
   title: string;
   description?: string;
   action?: ReactNode;

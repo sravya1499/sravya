@@ -1,9 +1,6 @@
 import { useEffect, useState, useCallback } from "react";
 import { NavLink, Outlet, useNavigate, useLocation } from "react-router-dom";
-import {
-  LayoutDashboard, Compass, FolderKanban, Inbox, Bell, User as UserIcon,
-  Shield, LogOut, Menu, X, Sparkles, Search,
-} from "lucide-react";
+import { LayoutDashboard, Compass, FolderKanban, Inbox, Bell, User as UserIcon, Shield, LogOut, Menu, X, Sparkles, Search, Users as Users2 } from "lucide-react";
 import { useAuth } from "../lib/auth";
 import { supabase } from "../lib/supabase";
 import { fetchNotifications, markNotificationRead, markAllNotificationsRead } from "../lib/api";

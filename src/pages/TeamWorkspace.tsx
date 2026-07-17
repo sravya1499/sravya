@@ -7,7 +7,7 @@ import {
   fetchProject, fetchMembers, fetchTasks, fetchMessages, fetchRequestsForProject,
   createTask, updateTask, deleteTask, sendMessage, updateMemberRole, removeMember,
   fetchGithubRepo, fetchGithubCommits, linkGithubRepo, unlinkGithubRepo, refreshGithubCommits,
-  pushNotification, updateProject,
+  pushNotification, updateProject, createReport,
 } from "../lib/api";
 import {
   Project, ProjectMember, Task, Message, JoinRequest, GithubRepo, GithubCommit,
@@ -214,7 +214,7 @@ export default function TeamWorkspace() {
 
       <ReportModal open={reportOpen} onClose={() => setReportOpen(false)} onSubmit={async (reason) => {
         if (!profile) return;
-        try { await import("../lib/api").then(m => m.createReport({ target_type: "project", target_id: project.id, reason })); toast({ type: "success", message: "Report submitted" }); setReportOpen(false); }
+        try { await createReport({ target_type: "project", target_id: project.id, reason }); toast({ type: "success", message: "Report submitted" }); setReportOpen(false); }
         catch (e: any) { toast({ type: "error", message: e.message }); }
       }} />
     </div>
