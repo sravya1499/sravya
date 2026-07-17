@@ -1,10 +1,6 @@
 import { useEffect, useState, useRef, useCallback } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import {
-  ArrowLeft, Users, ListChecks, MessageSquare, Github, Plus,
-  Trash2, Send, Calendar, Crown, UserCog, Star, GitFork, RefreshCw,
-  ExternalLink, MoreVertical, Flag, Loader2,
-} from "lucide-react";
+import { ArrowLeft, Users, ListChecks, MessageSquare, Github, Plus, Trash2, Send, Calendar, Crown, UserCog, Star, GitFork, RefreshCw, ExternalLink, MoveVertical as MoreVertical, Flag, Loader as Loader2 } from "lucide-react";
 import { supabase } from "../lib/supabase";
 import { useAuth } from "../lib/auth";
 import {

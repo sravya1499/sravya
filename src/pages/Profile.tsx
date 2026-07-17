@@ -1,9 +1,6 @@
 import { useEffect, useState, FormEvent } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import {
-  Edit3, MapPin, GraduationCap, Github, Mail, Save, X,
-  Briefcase, Award, Calendar, ArrowLeft, MessageSquare, Flag,
-} from "lucide-react";
+import { CreditCard as Edit3, MapPin, GraduationCap, Github, Mail, Save, X, Briefcase, Award, Calendar, ArrowLeft, MessageSquare, Flag } from "lucide-react";
 import { useAuth } from "../lib/auth";
 import {
   fetchProfile, fetchProfileByUsername, updateProfile, fetchProjects,
