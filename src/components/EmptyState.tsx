@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { LucideIcon } from "lucide-react";
+import { Video as LucideIcon } from "lucide-react";
 
 interface Props {
   icon?: LucideIcon;
